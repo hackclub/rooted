@@ -4,9 +4,9 @@ A week-long coding camp for teens in Denmark, organized with BornHack and Hack C
 
 If your on Slack then head over to [#rooted](https://hackclub.slack.com/archives/C09LYU1S23Y) to RSVP!
 
-_Name changed from **camp** to **Rooted**_
+A simple HTML and CSS landing page for Rooted.
 
-_Coded by (mainly) Christian and Freddie for Hack Club_
+_Name changed from **camp** to **Rooted**_
 
 
 ## Running Locally
@@ -25,3 +25,6 @@ cd rooted
 ```
 - Open ```index.html```
 
+## Credits
+
+Coded by [Christian](https://github.com/christianwell) and [Freddie](https://github.com/hippogriff101)
