@@ -97,6 +97,11 @@ p {
     color: #cec9c9;
     font-weight: bold;
     text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.bornhack:hover {
+    color: #fff;
 }
 
 /*  2s */
@@ -172,6 +177,11 @@ button {
     font-weight: bold;
     text-decoration: underline;
     font-style: italic;
+    transition: color 0.2s ease;
+}
+
+.hackclub:hover {
+    color: #fff;
 }
 
 .slack {
@@ -189,6 +199,7 @@ button {
     padding: 4rem 1rem;
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     scroll-snap-align: start;
@@ -201,7 +212,7 @@ button {
 
 /* responsive tweaks */
 @media (max-width: 600px) {
-    .camp-image { max-width: 60%; }
+    .camp-image { max-width: 80%; }
     .button, .button2, button { padding: 8px 12px; font-size: 15px; }
     .details-inner { padding: 0 1rem; }
 }
@@ -226,11 +237,23 @@ button {
 .details-inner dl dt {
     margin-top: 1.25rem;   /* gap before each question */
     font-weight: 700;
+    font-size: 1.1rem;
 }
 .details-inner dl dd {
     margin: 0.4rem 0 0.8rem 1rem;  /* small indent and vertical spacing */
-    line-height: 1.5;
+    line-height: 1.6;
     color: #333;
+}
+
+.details-inner dl a {
+    color: #0d3e0d;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.details-inner dl a:hover {
+    color: #041104;
+    text-decoration: none;
 }
 
 /* smaller screens */
@@ -398,6 +421,7 @@ footer {
         max-width: 100%;
         flex-direction: column;
         text-align: center;
+        font-size: 1.25rem;
     }
     
     .orgname img {
@@ -407,6 +431,11 @@ footer {
     
     .orgname h3 {
         margin: 0.5rem 0;
+        font-size: 1.5rem;
+    }
+    
+    .orgname dd {
+        font-size: 1rem;
     }
     
     .organisers {
@@ -421,5 +450,9 @@ footer {
     
     h1 {
         font-size: 2.5rem;
+    }
+    
+    .orgtitle {
+        font-size: 2rem;
     }
 }
