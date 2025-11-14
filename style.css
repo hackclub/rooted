@@ -97,6 +97,11 @@ p {
     color: #cec9c9;
     font-weight: bold;
     text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.bornhack:hover {
+    color: #fff;
 }
 
 /*  2s */
@@ -172,6 +177,11 @@ button {
     font-weight: bold;
     text-decoration: underline;
     font-style: italic;
+    transition: color 0.2s ease;
+}
+
+.hackclub:hover {
+    color: #fff;
 }
 
 .slack {
@@ -189,6 +199,7 @@ button {
     padding: 4rem 1rem;
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     scroll-snap-align: start;
@@ -201,7 +212,7 @@ button {
 
 /* responsive tweaks */
 @media (max-width: 600px) {
-    .camp-image { max-width: 60%; }
+    .camp-image { max-width: 80%; }
     .button, .button2, button { padding: 8px 12px; font-size: 15px; }
     .details-inner { padding: 0 1rem; }
 }
@@ -226,11 +237,23 @@ button {
 .details-inner dl dt {
     margin-top: 1.25rem;   /* gap before each question */
     font-weight: 700;
+    font-size: 1.1rem;
 }
 .details-inner dl dd {
     margin: 0.4rem 0 0.8rem 1rem;  /* small indent and vertical spacing */
-    line-height: 1.5;
+    line-height: 1.6;
     color: #333;
+}
+
+.details-inner dl a {
+    color: #0d3e0d;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.details-inner dl a:hover {
+    color: #041104;
+    text-decoration: none;
 }
 
 /* smaller screens */
@@ -258,6 +281,12 @@ p{
 }
 
 p2{
+    color: #cec9c9;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.subtitle {
     color: #cec9c9;
     font-style: italic;
     font-size: 18px;
@@ -335,4 +364,95 @@ footer {
     color: #111;
     text-align: center;
     padding: 1rem;
+}
+
+/* Gallery images - responsive grid */
+.gallery-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive map container */
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    margin: 1rem auto;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.hackclub-banner {
+    display: block;
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+.hackclub-banner img {
+    width: 100%;
+    height: auto;
+}
+
+/* Mobile improvements for organiser cards */
+@media (max-width: 768px) {
+    .orgname {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        text-align: center;
+        font-size: 1.25rem;
+    }
+    
+    .orgname img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .orgname h3 {
+        margin: 0.5rem 0;
+        font-size: 1.5rem;
+    }
+    
+    .orgname dd {
+        font-size: 1rem;
+    }
+    
+    .organisers {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .gallery-images {
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .orgtitle {
+        font-size: 2rem;
+    }
 }
