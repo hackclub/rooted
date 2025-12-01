@@ -20,6 +20,12 @@
   background-color:var(--hero-bg);
 }
 
+@media(max-width:600px){
+  :global(html),:global(body){
+    overflow-x:hidden;
+  }
+}
+
 :global(a){
   text-decoration: none;
   border-bottom: 2px solid #275527;
@@ -107,8 +113,17 @@
   transition:transform 0.15s ease,background-color 0.15s ease;
 }
 
-.rsvp{
+.rsvp-button{
   margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.rsvp-button.sticky{
+  position: fixed;
+  top: 18px;
+  right: calc(18px + clamp(14px, 3.5vw, 18px) * 2 + clamp(16px, 4vw, 25px) * 2 + 5px * 2 + 10px);
+  z-index: 20;
+  margin-top: 0;
 }
 
 .button2:hover{
@@ -214,15 +229,25 @@
   margin-top:1rem;
 }
 
-.top-button{
-  position:absolute;
-  top:18px;
-  right:18px;
-  z-index:20;
+.faq-button{
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+
+.faq-button.sticky{
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 20;
+  margin-top: 0;
 }
 
 @media(max-width:600px){
-  .top-button{top:12px;right:12px;}
+  .faq-button.sticky{top:12px;right:12px;}
+  .rsvp-button.sticky{
+    top:12px;
+    right: calc(12px + clamp(14px, 3.5vw, 18px) * 2 + clamp(16px, 4vw, 25px) * 2 + 5px * 2 + 10px);
+  }
   .button-row{gap:0.4rem}
 }
 
@@ -264,7 +289,7 @@
   cursor:pointer;
 }
 
-.top-button, .modal-close {
+.modal-close {
   display:inline-block !important;
   margin:0 !important;
 }
@@ -347,7 +372,7 @@
     background-color: #275527 !important;
     color: rgb(193, 255, 187) !important;
     border: 3px solid rgb(193, 255, 187) !important;
-    border-radius: 8px !important;
+    border-radius: 20px !important;
     width:clamp(40px, 10vw, 50px) !important;
     height:clamp(40px, 10vw, 50px) !important;
     font-size:clamp(20px, 5vw, 28px) !important;
@@ -496,8 +521,7 @@ footer p{
 </style>
 
 
-<main class="hero">
-    <button id="open-faq" class="button2 top-button" type="button" aria-controls="faq-modal" on:click={openModal}>FAQ</button>
+<main class="hero" bind:this={heroEl}>
         <h1 class="h1">ROOTED</h1>
         <p>Spend time coding, Come to <a class="bornhack" href="https://bornhack.dk">bornhack</a> 🏕️</p>
         <p2>Code with other teens in a forest in Denmark for a week all for free</p2>
@@ -505,7 +529,8 @@ footer p{
             <p class="undertext">This event is a W.I.P and for Hack Club members aged 13 to 18.</p>
             <p class="slack">not a hack clubber? check out <a class="hackclub" href="https://hackclub.com">Hack Club</a> to become one!</p>
             <p class="slack">Check out <a class="hackclub" href="https://hackclub.com">Hack Club</a> for events!</p>
-            <a class="button2 rsvp" href="https://forms.hackclub.com/rootedrsvp" target="_blank" rel="noopener">RSVP</a>
+            <a class="button2 rsvp-button" class:sticky={rsvpSticky} href="https://forms.hackclub.com/camprsvp" target="_blank" rel="noopener" bind:this={rsvpButtonEl}>RSVP</a>
+            <button id="open-faq" class="button2 faq-button" class:sticky={faqSticky} type="button" aria-controls="faq-modal" on:click={openModal} bind:this={faqButtonEl}>FAQ</button>
         </div>
     </main>
     
@@ -601,6 +626,11 @@ footer p{
     let modalEl: HTMLElement | null = null;
     let closeBtnEl: HTMLButtonElement | null = null;
     let currentSlide = 0;
+    let faqSticky = false;
+    let rsvpSticky = false;
+    let heroEl: HTMLElement | null = null;
+    let faqButtonEl: HTMLButtonElement | null = null;
+    let rsvpButtonEl: HTMLAnchorElement | null = null;
     
     const organizers = [
         {
@@ -655,7 +685,8 @@ footer p{
         currentSlide = index;
     }
 
-    async function openModal() {
+    async function openModal(e: MouseEvent) {
+        e.preventDefault();
         previousActive = document.activeElement as HTMLElement | null;
         modalOpen = true;
         await tick();
@@ -684,8 +715,26 @@ footer p{
         if (e.key === 'Escape' && modalOpen) closeModal();
     }
 
+    function handleScroll() {
+        if (heroEl) {
+            const heroRect = heroEl.getBoundingClientRect();
+            if (heroRect.bottom < 0) {
+                if (!faqSticky) faqSticky = true;
+                if (!rsvpSticky) rsvpSticky = true;
+            } else {
+                if (faqSticky) faqSticky = false;
+                if (rsvpSticky) rsvpSticky = false;
+            }
+        }
+    }
+
     onMount(() => {
         document.addEventListener('keydown', onKeydown);
-        return () => document.removeEventListener('keydown', onKeydown);
+        window.addEventListener('scroll', handleScroll);
+        
+        return () => {
+            document.removeEventListener('keydown', onKeydown);
+            window.removeEventListener('scroll', handleScroll);
+        };
     });
 </script>
