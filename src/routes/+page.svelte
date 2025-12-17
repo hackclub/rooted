@@ -29,7 +29,7 @@
 </svelte:head>
 
 <style> 
-    @import "/src/routes/styles.css";
+    @import "./styles.css";
 </style>
 
 {#if !pageLoaded}
