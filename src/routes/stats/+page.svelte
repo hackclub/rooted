@@ -11,6 +11,8 @@
     let history: HistoryEntry[] = $state([]);
     let milestones = [200, 250, 300, 400, 500, 750, 1000];
     
+
+    
     async function fetchCount() {
         try {
             const res = await fetch('https://api.rooted.hackclub.com/count');
@@ -235,6 +237,7 @@
         font-style: italic;
     }
     
+    
     .growth-rate {
         font-size: 18px;
         color: #8ab88a;
@@ -355,6 +358,7 @@
         .line-chart svg {
             height: 180px;
         }
+        
     }
     
     @media (max-width: 480px) {
