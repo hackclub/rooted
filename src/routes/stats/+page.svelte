@@ -388,7 +388,7 @@
             <p class="share-label">Spread the word</p>
             <div class="share-buttons">
                 <a 
-                    href="https://twitter.com/intent/tweet?text={encodeURIComponent(`${currentCount} hackers already signed up for Rooted! Join us: `)}&url={encodeURIComponent('https://rooted.hackclub.com')}" 
+                    href="https://x.com/intent/tweet?text={encodeURIComponent(`${currentCount} hackers already signed up for Rooted! Join us: `)}&url={encodeURIComponent('https://rooted.hackclub.com')}" 
                     target="_blank" 
                     rel="noopener"
                     class="share-btn"

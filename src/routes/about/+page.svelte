@@ -14,7 +14,7 @@
             <span class="text">Rooted is a work-in-progress.</span>
         </div>
         
-        <h1 class="title">rooted faq</h1>
+        <h1 class="title">Rooted FAQ</h1>
 
         <div class="faq-item">
             <h2 class="faq-question">What is BornHack?</h2>
@@ -38,7 +38,7 @@
             <p class="faq-answer">
                 BornHack takes place on the island of Funen in Denmark.
             </p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d295766.39714099077!2d9.611841801227921!3d55.3857663356479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464cc191437ffa5b%3A0x87b7c392691fc596!2sBornHack!5e1!3m2!1sda!2sdk!4v1766053770661!5m2!1sda!2sdk" width="100%" height="300" style="border:0; border-radius: 8px; margin-top: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2266.4177307032205!2d9.936464176173745!3d55.385617020213814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464cc191437ffa5b%3A0x87b7c392691fc596!2sBornHack!5e0!3m2!1sen!2sdk!4v1766092854910!5m2!1sen!2sdk" width="100%" height="300" style="border:0; border-radius: 8px; margin-top: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="BornHack location map"></iframe>
         </div>
 
         <div class="faq-item">
