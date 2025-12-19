@@ -37,12 +37,12 @@
 
                     <div class="photo-gallery">
                         <div class="gallery-grid">
-                            <img src="/bornhack/logotent_pink_people.jpg" alt="BornHack tent with people" loading="lazy" decoding="async" width="300" height="200" />
-                            <img src="/bornhack/participant_tent_laptop.jpg" alt="Participant coding in tent" loading="lazy" decoding="async" width="300" height="200" />
-                            <img src="/bornhack/night_stars_lights.jpg" alt="Night sky with lights" loading="lazy" decoding="async" width="300" height="200" />
-                            <img src="/bornhack/dome_lights.jpg" alt="Dome with colorful lights" loading="lazy" decoding="async" width="300" height="200" />
-                            <img src="/bornhack/ellen_tesla_coil.jpg" alt="Tesla coil demonstration" loading="lazy" decoding="async" width="300" height="200" />
-                            <img src="/bornhack/bar_people.jpg" alt="People at the bar" loading="lazy" decoding="async" width="300" height="200" />
+                            <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/4a2670327c6112ff_logotent_pink_people.jpg" alt="BornHack tent with people" loading="lazy" decoding="async" width="300" height="200" />
+                            <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/a526b457de420ccf_participant_tent_laptop.jpg" alt="Participant coding in tent" loading="lazy" decoding="async" width="300" height="200" />
+                            <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/b591d8f962f07947_night_stars_lights.jpg" alt="Night sky with lights" loading="lazy" decoding="async" width="300" height="200" />
+                            <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/760b56b7773483d0_dome_lights.jpg" alt="Dome with colorful lights" loading="lazy" decoding="async" width="300" height="200" />
+                            <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/bf6b2b0ca5dff899_ellen_tesla_coil.jpg" alt="Tesla coil demonstration" loading="lazy" decoding="async" width="300" height="200" />
+                            <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/c6b87a72a4e46b41_bar_people.jpg" alt="People at the bar" loading="lazy" decoding="async" width="300" height="200" />
                         </div>
                         <p class="gallery-credit">Photos from <a href="https://bornhack.dk" target="_blank" rel="noopener">bornhack.dk</a></p>
                     </div>
