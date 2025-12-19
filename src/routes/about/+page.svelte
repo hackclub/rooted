@@ -1,4 +1,5 @@
 <script>
+    let bornhackOpen = $state(false);
 </script>
 
 <style>
@@ -16,36 +17,47 @@
         
         <h1 class="title">Rooted FAQ</h1>
 
-        <div class="faq-item">
-            <h2 class="faq-question">What is BornHack?</h2>
-            <p class="faq-answer">
-                BornHack is an annual week-long hacker camp held on the Danish island of Funen. 
-                You will build projects amongst other teens! Visit the official site 
-                <a href="https://bornhack.dk" target="_blank" rel="noopener">here</a>.
-            </p>
+        <!-- BornHack Collapsible Section -->
+        <div class="collapsible-section">
+            <button class="collapsible-header" onclick={() => bornhackOpen = !bornhackOpen}>
+                <span class="collapsible-title">🏕️ About BornHack</span>
+                <span class="collapsible-arrow" class:open={bornhackOpen}>▶</span>
+            </button>
+            
+            {#if bornhackOpen}
+                <div class="collapsible-content">
+                    <div class="bornhack-info">
+                        <p>
+                            <a href="https://bornhack.dk" target="_blank" rel="noopener">BornHack</a> is an annual week-long hacker camp held on the Danish island of Funen. You'll camp outdoors, build projects, attend talks,And so much more.
+                        </p>
+                        <p>
+                            BornHack 2026 will likely take place in <strong>July 2026</strong> (exact dates TBD). The event runs for about a week.
+                        </p>
+                    </div>
+
+                    <div class="photo-gallery">
+                        <div class="gallery-grid">
+                            <img src="https://bornhack.dk/static/img/bornhack-2020/logotent_pink_people.jpg" alt="BornHack tent with people" loading="lazy" />
+                            <img src="https://bornhack.dk/static/img/bornhack-2020/participant_tent_laptop.jpg" alt="Participant coding in tent" loading="lazy" />
+                            <img src="https://bornhack.dk/static/img/bornhack-2020/night_stars_lights.jpg" alt="Night sky with lights" loading="lazy" />
+                            <img src="https://bornhack.dk/static/img/bornhack-2020/dome_lights.jpg" alt="Dome with colorful lights" loading="lazy" />
+                            <img src="https://bornhack.dk/static/img/bornhack-2020/ellen_tesla_coil.jpg" alt="Tesla coil demonstration" loading="lazy" />
+                            <img src="https://bornhack.dk/static/img/bornhack-2020/bar_people.jpg" alt="People at the bar" loading="lazy" />
+                        </div>
+                        <p class="gallery-credit">Photos from <a href="https://bornhack.dk" target="_blank" rel="noopener">bornhack.dk</a></p>
+                    </div>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2266.4177307032205!2d9.936464176173745!3d55.385617020213814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464cc191437ffa5b%3A0x87b7c392691fc596!2sBornHack!5e0!3m2!1sen!2sdk!4v1766092854910!5m2!1sen!2sdk" width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="BornHack location map"></iframe>
+                </div>
+            {/if}
         </div>
 
+        <!-- General FAQs -->
         <div class="faq-item">
             <h2 class="faq-question">What is Hack Club?</h2>
             <p class="faq-answer">
                 Hack Club is a global community of teenage hackers who love building and coding things. 
                 We run clubs, events, and projects around the world to help teens learn, create, and connect.
-            </p>
-        </div>
-
-        <div class="faq-item">
-            <h2 class="faq-question">Where is BornHack?</h2>
-            <p class="faq-answer">
-                BornHack takes place on the island of Funen in Denmark.
-            </p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2266.4177307032205!2d9.936464176173745!3d55.385617020213814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464cc191437ffa5b%3A0x87b7c392691fc596!2sBornHack!5e0!3m2!1sen!2sdk!4v1766092854910!5m2!1sen!2sdk" width="100%" height="300" style="border:0; border-radius: 8px; margin-top: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="BornHack location map"></iframe>
-        </div>
-
-        <div class="faq-item">
-            <h2 class="faq-question">When is Rooted/BornHack happening?</h2>
-            <p class="faq-answer">
-                BornHack 2026 will likely take place in July 2026 (exact dates to be confirmed). 
-                The event usually runs for about a week.
             </p>
         </div>
 
