@@ -250,21 +250,34 @@ img.loaded {
 /* Info Button */
 .info-btn {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 14px 28px;
   font-family: 'Phantom Sans', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: bold;
   color: #1a0a00;
-  background: #ffb347;
-  border: none;
-  border-radius: 6px;
+  background: linear-gradient(135deg, #ffcc66 0%, #ffb347 50%, #ff9933 100%);
+  border: 3px solid #ffe0a0;
+  border-radius: 12px;
   text-decoration: none;
-  transition: background 0.2s ease;
   cursor: pointer;
+  box-shadow: 0 0 30px rgba(255, 179, 71, 0.8), 0 0 60px rgba(255, 153, 51, 0.4), 0 6px 20px rgba(0, 0, 0, 0.5);
+  animation: info-pulse 2s ease-in-out infinite;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
 }
 
 .info-btn:hover {
-  background: #ffc966;
+  background: linear-gradient(135deg, #ffdd88 0%, #ffc966 50%, #ffaa44 100%);
+  box-shadow: 0 0 40px rgba(255, 179, 71, 1), 0 0 80px rgba(255, 153, 51, 0.6), 0 8px 25px rgba(0, 0, 0, 0.6);
+  transform: translateY(-3px) scale(1.05);
+}
+
+@keyframes info-pulse {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(255, 179, 71, 0.8), 0 0 60px rgba(255, 153, 51, 0.4), 0 6px 20px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(255, 179, 71, 1), 0 0 100px rgba(255, 153, 51, 0.6), 0 6px 20px rgba(0, 0, 0, 0.5);
+  }
 }
 
 /* Back Button */

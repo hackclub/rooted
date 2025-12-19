@@ -123,8 +123,82 @@
     }
     
     .stats-content {
-        max-width: 800px;
+        max-width: 1200px;
         margin: 0 auto;
+    }
+    
+    /* Wide screen layout */
+    @media (min-width: 1024px) {
+        .stats-container {
+            padding: 60px 40px;
+        }
+        
+        .stats-header {
+            margin-bottom: 60px;
+        }
+        
+        .title {
+            font-size: 64px;
+        }
+        
+        .current-count {
+            margin-bottom: 60px;
+        }
+        
+        .count-number {
+            font-size: 120px;
+        }
+        
+        .count-label {
+            font-size: 24px;
+        }
+        
+        .section-title {
+            font-size: 28px;
+        }
+        
+        .line-chart {
+            padding: 30px;
+        }
+        
+        .line-chart svg {
+            height: 350px;
+        }
+        
+        .chart {
+            height: 280px;
+            padding: 30px;
+        }
+        
+        .milestones {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .milestone {
+            padding: 24px;
+        }
+        
+        .milestone-target {
+            font-size: 40px;
+        }
+        
+        .milestone-date {
+            font-size: 16px;
+        }
+        
+        .share-buttons {
+            gap: 20px;
+        }
+        
+        .share-btn {
+            padding: 14px 28px;
+            font-size: 16px;
+        }
+        
+        .growth-rate {
+            font-size: 22px;
+        }
     }
     
     .stats-header {
