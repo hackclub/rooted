@@ -597,3 +597,17 @@ img.loaded {
   }
 }
 
+.org-pic {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5%;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+.org-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
