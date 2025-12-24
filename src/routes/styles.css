@@ -597,3 +597,61 @@ img.loaded {
   }
 }
 
+.org-pic {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5%;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+.org-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-buttons {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 1;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Phantom Sans', sans-serif;
+    font-size: 14px;
+    color: #6a9a6a;
+}
+
+.footer a {
+  display: block;
+  font-family: 'Phantom Sans', sans-serif;
+  font-size: 14px;
+  color: gray;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer p {
+  margin: 4px 0;
+}
+.footer a:hover {
+  color: #a8d4a8;
+}
+
+.error {
+  opacity: 1; 
+  background-color: #6a9a6a; 
+  border-radius: 8px; 
+  width: 300px; 
+  height: 200px; 
+  padding: 10px; 
+  display: inline-block;
+}
+

@@ -1,11 +1,10 @@
 <script>
     import { onMount } from 'svelte';
     
-    let { data } = $props();
     let pageLoaded = $state(false);
 
-    // Number of fireflies = RSVP count (with a reasonable max for performance)
-    const fireflyCount = Math.min(data.rsvpCount ?? 0, 100);
+    // Fixed number of fireflies for error page
+    const fireflyCount = 50;
     
     // Generate random positions and animation timings for each firefly
     const fireflies = Array.from({ length: fireflyCount }, (_, i) => ({
@@ -43,7 +42,7 @@
 </svelte:head>
 
 <style> 
-    @import "./styles.css";
+    @import "../styles.css";
 </style>
 
 {#if !pageLoaded}
@@ -63,24 +62,18 @@
         {/each}
         
         <div class="bg-content">
-            <h2>Rooted</h2>
-            {#if data.rsvpCount !== null}
-                <p class="rsvp-count">{data.rsvpCount} already rooted</p>
-            {/if}
-            <a href="https://forms.hackclub.com/camprsvp" class="rsvp-btn" target="_blank" rel="noopener">RSVP</a>
-            <a href="/stats" class="stats-link">View live stats →</a>
-        </div>
+            <h2>Rooted - 404 Not Found</h2>
+                <img class="error" src="/confused_dino-removebg.png" alt="404 image" />
+            <p style="color: gray;">Looks like you got a bit lost, the page you are looking for does not exist.</p>
+            <br>
+            <a href="/" class="rsvp-btn">Head back home!</a>
+
         
         <nav class="nav-buttons">
             <a href="/about" class="info-btn">What is this?</a>
         </nav>
         
-        <footer class="footer">
-            <p>Made with ❤️ by Hack Club!</p>
-            <br>
-            <a href="https://github.com/hackclub/rooted" target="_blank" rel="noopener">All code is open sourced here!</a>
-            <br>
-            <a href="https://hackclub.com" target="_blank" rel="noopener"><i>© 2025 Hack Club. 501(c)(3) nonprofit (EIN: 81-2908499)</i></a>
-        </footer>
+        
+        </div>
     </div>
 {/if}

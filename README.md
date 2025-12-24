@@ -1,38 +1,60 @@
-# sv
+# Rooted
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+🌳 Join Hack Club at BornHack 2026 - a week-long hacker camp in Denmark!
 
-## Creating a project
+## About
 
-If you're seeing this, you've probably already done this step. Congrats!
+Rooted is a work-in-progress YSWS (You Ship, We Ship) event sponsored by Hack Club, taking place at BornHack 2026.
+
+## Features
+
+- 🔥 Dynamic firefly animations based on RSVP count
+- 📊 Live RSVP tracking and statistics
+- 📈 Growth predictions and milestone tracking
+- 📱 Fully responsive design
+- 🎨 Beautiful gradient backgrounds and animations
+
+## Development
+
+Install dependencies:
 
 ```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+npm install
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Start the development server:
 
 ```sh
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
 ## Building
 
-To create a production version of your app:
+Create a production build:
 
 ```sh
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+Preview the production build:
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```sh
+npm run preview
+```
+
+## Tech Stack
+
+- [SvelteKit](https://kit.svelte.dev/) - Web framework
+- [Svelte 5](https://svelte.dev/) - UI framework with runes
+- [Vercel](https://vercel.com/) - Deployment platform
+- [Rooted API](https://api.rooted.hackclub.com) - RSVP data backend
+
+## Contributing
+
+We welcome contributions! Feel free to open issues or submit pull requests. Take a look at the ```Contributing``` and ```Code of Conduct``` first!
+
+## License
+
+Made with ❤️ by the Rooted team at Hack Club.
+
+© 2025 Hack Club. 501(c)(3) nonprofit (EIN: 81-2908499)

@@ -61,6 +61,17 @@
         if (timeDiff === 0) return null;
         return countDiff / timeDiff;
     }
+
+    function getTweetUrl(): string {
+        const base = 'https://x.com/intent/tweet';
+        const text = `${currentCount ?? 'Many'} hackers already signed up for Rooted! Join us:`;
+        const url = 'https://rooted.hackclub.com';
+        const params = new URLSearchParams({
+            text: text,
+            url: url
+        });
+        return `${base}?${params.toString()}`;
+    }
     
     function predictMilestone(target: number): string | null {
         const rate = calculateGrowthRate();
@@ -462,7 +473,7 @@
             <p class="share-label">Spread the word</p>
             <div class="share-buttons">
                 <a 
-                    href="https://x.com/intent/tweet?text={encodeURIComponent(`${currentCount} hackers already signed up for Rooted! Join us: `)}&url={encodeURIComponent('https://rooted.hackclub.com')}" 
+                    href={getTweetUrl()}
                     target="_blank" 
                     rel="noopener"
                     class="share-btn"
