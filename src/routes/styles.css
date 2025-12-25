@@ -655,3 +655,74 @@ img.loaded {
   display: inline-block;
 }
 
+/* Team Section */
+.team-section {
+  margin-top: 50px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(124, 184, 124, 0.2);
+}
+
+.section-title {
+  font-family: 'Phantom Sans', sans-serif;
+  font-size: 36px;
+  color: #7cb87c;
+  margin-bottom: 30px;
+}
+
+.team-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(124, 184, 124, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.team-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  opacity: 1;
+}
+
+.team-info {
+  flex: 1;
+}
+
+.team-name {
+  font-family: 'Phantom Sans', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffb347;
+  margin: 0 0 8px 0;
+}
+
+.team-description {
+  font-family: 'Phantom Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #d4d4c4;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .team-member {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .team-avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+
