@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
     
     let bornhackOpen = $state(false);
+    let orgOpen = $state(false);
     
     interface TeamMember {
         id: string;
@@ -11,10 +12,10 @@
     }
     
     const teamIds = [
-        { id: 'U08NXJL86KT', description: 'Frog is one of the organisers' },
-        { id: 'U0938MZG8Q6', description: 'Christian is big boss' },
-        { id: 'U059VC0UDEU', description: 'Mahad is sigma.' },
-        { id: 'U078VN0UU2K', description: 'Freddie.' },
+        { id: 'U0938MZG8Q6', description: 'Christian is the Lead Organizer for Rooted. He has worked on many YSWS events before and is excited to bring Rooted to life.' },
+        { id: 'U059VC0UDEU', description: 'Mahad is one of the Co-Organizers for Rooted. He is an amazing developer and also works for Hack Club.' },
+        { id: 'U078VN0UU2K', description: 'Freddie is one of the Co-Organizers for Rooted. He loves coding and is excited to help out with Rooted.' },
+        { id: 'U08NXJL86KT', description: 'Frog is one of the Co-Organizers for Rooted. He is a great member of the team and is always ready to help.' },
     ];
     
     let team: TeamMember[] = $state([]);
@@ -36,6 +37,8 @@
                         avatar: data.avatar,
                         description: member.description
                     });
+                } else {
+                    members.push({ id: member.id, name: 'Unknown', avatar: 'https://via.placeholder.com/80', description: member.description });
                 }
             } catch (e) {
                 members.push({ id: member.id, name: 'Unknown', avatar: 'https://via.placeholder.com/80', description: member.description });
@@ -89,21 +92,8 @@
                         </div>
                         <p class="gallery-credit">Photos from <a href="https://bornhack.dk" target="_blank" rel="noopener">bornhack.dk</a></p>
                     </div>
-                    <div class="team-section">
-                                <h2 class="section-title">Who are we?</h2>
-                                <div class="team-grid">
-                                    {#each team as member}
-                                        <div class="team-member">
-                                            <img src={member.avatar} alt={member.name} class="team-avatar" />
-                                            <div class="team-info">
-                                                <h3 class="team-name">{member.name}</h3>
-                                                <p class="team-description">{member.description}</p>
-                                            </div>
-                                        </div>
-                                    {/each}
-                                </div>
-                            </div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2266.4177307032205!2d9.936464176173745!3d55.385617020213814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464cc191437ffa5b%3A0x87b7c392691fc596!2sBornHack!5e0!3m2!1sen!2sdk!4v1766092854910!5m2!1sen!2sdk" width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen={true} loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="BornHack location map" class="map-iframe"></iframe>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2266.4177307032205!2d9.936464176173745!3d55.385617020213814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464cc191437ffa5b%3A0x87b7c392691fc596!2sBornHack!5e0!3m2!1sen!2sdk!4v1766092854910!5m2!1sen!2sdk" width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen={true} loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="BornHack location map"></iframe>
                 </div>
             {/if}
         </div>
@@ -121,6 +111,7 @@
                             We have a dedicated team of teen hackers working with Hack Club to make Rooted happen!
                         </p>
                     </div>
+<<<<<<< HEAD
                 <div class="faq-item">
                     <h2 class="faq-question">Christian</h2>
                     <div class="org-content">
@@ -163,6 +154,20 @@
 
                             
                 </div>
+=======
+                    <div class="team-grid">
+                        {#each team as member}
+                            <div class="team-member">
+                                <img src={member.avatar} alt={member.name} class="team-avatar" />
+                                <div class="team-info">
+                                    <h3 class="team-name">{member.name}</h3>
+                                    <p class="team-description">{member.description}</p>
+                                </div>
+                            </div>
+                        {/each}
+                    </div>
+                </div>
+>>>>>>> 5e80267 (should work now)
             {/if}
         </div>
         <br>
@@ -223,7 +228,5 @@
                 If you are a member of Hack Club Slack, you can also DM Christian, Mahad, Freddie, or Frog directly OR use the #rooted-help channel!
             </p>
         </div>
-
-        
     </div>
 </div>
