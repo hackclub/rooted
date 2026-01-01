@@ -469,22 +469,7 @@
             <div class="count-label">Hackers Rooted</div>
         </div>
         
-        <div class="share-section">
-            <p class="share-label">Spread the word</p>
-            <div class="share-buttons">
-                <a 
-                    href={getTweetUrl()}
-                    target="_blank" 
-                    rel="noopener"
-                    class="share-btn"
-                >
-                    Tweet
-                </a>
-                <button class="share-btn" onclick={() => {navigator.clipboard.writeText('https://rooted.hackclub.com'); alert('Link copied!')}}>
-                    Copy Link
-                </button>
-            </div>
-        </div>
+        
         
         {#if calculateGrowthRate() !== null}
             {@const rate = calculateGrowthRate()}

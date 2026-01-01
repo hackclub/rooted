@@ -68,11 +68,14 @@ img.loaded {
   background-size: cover;
   background-position: center 100%;
   background-attachment: fixed;
-  min-height: 100vh;
   position: relative;
   will-change: transform;
   transform: translateZ(0);
   overflow: hidden;
+}
+
+.bg-container.hero-section {
+  min-height: 100vh;
 }
 
 /* Fireflies */
@@ -119,6 +122,27 @@ img.loaded {
   50% {
     opacity: 0.6;
   }
+}
+
+/* Subtitle */
+.subtitle {
+  font-family: 'Phantom Sans', sans-serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: -5px;
+  margin-bottom: 5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.bornhack-link {
+  color: #ffb347;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.bornhack-link:hover {
+  color: #ffd699;
+  text-decoration: underline;
 }
 
 /* RSVP Count */
@@ -724,5 +748,46 @@ img.loaded {
     width: 100px;
     height: 100px;
   }
+}
+
+/* Slack CTA */
+.slack-cta {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.slack-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #4a154b 0%, #611f69 100%);
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Phantom Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(74, 21, 75, 0.3);
+}
+
+.slack-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(74, 21, 75, 0.4);
+}
+
+.slack-icon {
+  font-size: 20px;
+}
+
+.slack-note {
+  font-family: 'Phantom Sans', sans-serif;
+  font-size: 14px;
+  color: #8a8a7a;
+  margin: 0;
 }
 
