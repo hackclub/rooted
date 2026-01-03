@@ -6,8 +6,8 @@
     let pageLoaded = $state(false);
     let team = $state([]);
 
-    // Number of fireflies = RSVP count (with a reasonable max for performance)
-    const fireflyCount = Math.min(data.rsvpCount ?? 0, 100);
+    // Number of fireflies = RSVP count
+    const fireflyCount = data.rsvpCount ?? 0;
     
     // Generate random positions and animation timings for each firefly
     const fireflies = Array.from({ length: fireflyCount }, (_, i) => ({
